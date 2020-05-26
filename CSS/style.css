@@ -1,0 +1,102 @@
+ body {
+	background: url('../IMG/pokemon-3_s89a.jpg');
+	background-size: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 600px){
+	#foto {
+	border: solid 2px red;
+	background-color: white;
+	}
+
+	#foto:hover {
+		width: 300px;
+	}
+
+	#center {
+	    position: absolute;
+	    top: 228px;
+	    left: 351px;
+	}
+
+	#proxima {
+	    position: absolute;
+	    top: 104px;
+	    left: 0px;
+	}
+
+	#loading {
+	    position: absolute;
+	    top: 48%;
+	    left: 35%;
+	}
+
+	#info {
+	    background-color: 
+	    rgba(250, 250, 250, .5);
+	    position: absolute;
+	    top: 38%;
+	    width: 22%;
+	    left: 45%;
+	    height: 20%;
+	}
+}
+
+
+@media( max-width: 600px){
+	/* ------------------------------------- */
+	#logo {
+    width: 95%;
+	}
+
+	#pesquisa {
+	    top: 195px;
+	    position: absolute;
+	}
+
+	#center {
+	    position: absolute;
+	    top: 236px;
+	    left: 26px;
+	}
+
+	#proxima {
+	    position: absolute;
+	    top: 107px;
+	    left: 0px;
+	}
+
+	#info {
+	    background-color: 
+	    rgba(250, 250, 250, .5);
+	    top: 236px;
+	    position: absolute;
+	    width: 60%;
+	    left: 133px;
+	    height: 20%;
+	}
+
+	#foto {
+	    position: absolute;
+	    /* left: 19px;
+	    top: 237px; */
+	    border: solid 2px red;
+	    background-color: white;
+	}
+
+	#proxima {
+	    position: absolute;
+	    /* top: 340px;
+	    left: 20px; */
+	}
+
+	#loading {
+	    position: absolute;
+	    top: 20%;
+	}
+	/* ------------------------------------- */
+}
