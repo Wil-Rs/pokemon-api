@@ -48,7 +48,7 @@ function con(url){
 }
 
 function buscar(){
-	let url = `http://pokeapi.co/api/v2/pokemon/${input}`
+	let url = `https://pokeapi.co/api/v2/pokemon/${input}`
 	loadStart()
 	setTimeout( function(){ con(url) } , 3000)
 }
