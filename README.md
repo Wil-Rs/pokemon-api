@@ -1,2 +1,2 @@
 # pokemon-api
-Para mostrar imagens e umas informacoes sobre o pokemon escolhido. 123
+Para mostrar imagens e umas informacoes sobre o pokemon escolhido.
