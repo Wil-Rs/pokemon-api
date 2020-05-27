@@ -1,4 +1,4 @@
-let input = document.querySelector('#pesquisaInp').value
+let input = document.querySelector('#pesquisaInp').value.toLowerCase()
 let info = document.querySelector('#info')
 let busca = document.querySelector('#btPesquisa')
 let foto = document.querySelector('#foto')
@@ -6,6 +6,12 @@ let proxima = document.querySelector('#proxima')
 let principal = document.querySelector('#principal')
 let muda = 0
 let vetMuda = []
+
+function refresh(){
+	if(busca.innerTEXT == 'Pesquisar Novamente'){
+		window.location.reload() 
+	}
+}
 
 function mudar(){
 	muda ++
@@ -28,6 +34,8 @@ function loadStop(){
 }
 
 function con(url){
+
+	busca.innerHTML = 'Pesquisar Novamente'
 	axios.get(url)
 	.then(resp => {
 		info.innerHTML = `
@@ -45,9 +53,11 @@ function con(url){
 	})
 	.catch(err => alert(err))
 	.finally( loadStop() )// chama quando tudo acaba
+
 }
 
 function buscar(){
+	refresh()
 	let url = `https://pokeapi.co/api/v2/pokemon/${input}`
 	loadStart()
 	setTimeout( function(){ con(url) } , 3000)
