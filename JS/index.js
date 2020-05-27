@@ -1,4 +1,4 @@
-let input = document.querySelector('#pesquisaInp').value.toLowerCase()
+
 let info = document.querySelector('#info')
 let busca = document.querySelector('#btPesquisa')
 let foto = document.querySelector('#foto')
@@ -6,12 +6,6 @@ let proxima = document.querySelector('#proxima')
 let principal = document.querySelector('#principal')
 let muda = 0
 let vetMuda = []
-
-function refresh(){
-	if(busca.innerTEXT == 'Pesquisar Novamente'){
-		window.location.reload() 
-	}
-}
 
 function mudar(){
 	muda ++
@@ -33,31 +27,36 @@ function loadStop(){
 	axios.isCancel()
 }
 
-function con(url){
-
-	busca.innerHTML = 'Pesquisar Novamente'
-	axios.get(url)
-	.then(resp => {
-		info.innerHTML = `
+function addInfo(resp, local){
+	local.innerHTML = `
 		<p>Nome: ${resp.data.name}</p>
 		<p>Peso: ${resp.data.weight}</p>
 		<p>Altura: ${resp.data.height}</p>
 		`
-		// foto.src = resp.data.sprites.back_female
+}
+
+function con(url){
+	vetMuda = []
+	axios.get(url)
+	.then(resp => {
+		// info.innerHTML = 
+		addInfo(resp, info)
+		loadStop()
 		Object.keys(resp.data.sprites).forEach(itens => {
 			vetMuda.push( resp.data.sprites[itens] )
 		})
-		// console.log(resp.data)
 		foto.src = vetMuda[muda]
 		principal.style.display = 'block'
 	})
-	.catch(err => alert(err))
-	.finally( loadStop() )// chama quando tudo acaba
-
+	.catch(err => {
+		alert(err)
+		loadStop()
+	})
+	.finally(  )// chama quando tudo acaba
 }
 
 function buscar(){
-	refresh()
+	let input = document.querySelector('#pesquisaInp').value.toLowerCase()
 	let url = `https://pokeapi.co/api/v2/pokemon/${input}`
 	loadStart()
 	setTimeout( function(){ con(url) } , 3000)
@@ -65,3 +64,4 @@ function buscar(){
 
 busca.addEventListener('click', buscar)
 proxima.addEventListener('click', mudar)
+
