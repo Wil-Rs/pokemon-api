@@ -1,41 +1,90 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Pokemons</title>
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
-</head>
-<body id="ll">
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<header id="logo1"><!-- Pokemons -->
-		<img id="logo" src="IMG/logo.png" width="450px"></img>
-	</header>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+    <style type="text/css">
+      body {
+        background: url('./IMG/pokemon-3_s89a.jpg');
+        width: 100%;
+        background-size: 100%;
+      }
+    </style>
+ 
+    <title>Olá, mundo!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="./IMG/logo.png" class="img-fluid w-50 mx-auto d-block">
+      </div>
 
-	<div id="pesquisa">
-		<input id="pesquisaInp" type="text"> 
-		<!-- <img id="btPesquisa" src="IMG/busca.png"> -->
-		<button id="btPesquisa">Pequisar</button>
-	</div>
+      <did class="container">
+        <form onsubmit="return false">
+          <div class="row">
+            <div class="form-group col-12">
+              <input id="pesquisaInp" type="text" name="" class="form-control mx-auto d-block">
+            </div>
+            <div class="col">
+              <button id="btPesquisa" class="btn btn-primary mx-auto d-block">Pesquisar</button>
+            </div>
+          </div>
+        </form>
 
-	<div id="principal" style="display: none;">
-		<div id="center">
-			<img id="foto" >
-			<button id="proxima">Proxima</button>
+          <div id="principal" style="display: none;" class="p3">
 
-		</div>
+            <div id="info">
+              <div class="">
+                <img id="foto" class="img-fluid w-25 mx-auto d-block bg-white p-3">
+                <button class="btn btn-primary mx-auto d-block" id="proxima">Proxima</button>
+              </div>
+            </div>
+          
+            <form class="p-3">
+              
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label class="text-white font-weight-bold bg-primary border rounded">Nome</label>
+                    <input type="text" name="" class="form-control" id="nome">
+                  </div>
+                </div>
+        
+                <div class="col">
+                  <div class="form-group">
+                    <label class="text-white font-weight-bold bg-primary border rounded">Peso</label>
+                    <input type="text" name="" class="form-control" id="peso">
+                  </div>
+                </div>
 
-		<div id="info">
-			<!-- <p id="name">Pikachu</p>
-			<p id="tipo">Eletrico</p> -->
-		</div>
-	</div>
+                <div class="col">
+                  <div class="form-group">
+                    <label class="text-white font-weight-bold bg-primary border rounded">Altura</label>
+                    <input type="text" name="" class="form-control" id="altura">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
 
-	<div id="loading" style="display: none;" >
-		<img src="IMG/loading.gif">
-	</div>
+    <div id="loading" style="display: none;">
+      <img src="IMG/loading.gif" class="mx-auto d-block fixed-top mt-5">
+    </div>
 
-	<script type="text/javascript" src="JS/axios.min.js"></script>
-	<script src="JS/index.js"></script>
-</body>
+    <footer class="mx-auto d-block footer text-center fixed-bottom bg-primary text-white font-weight-bold navbar-fixed-bottom" >Wil-Rs</footer>
+  
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="./JS/jquery-3.4.1.slim.min.js" ></script>
+    <script src="./JS/popper.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="JS/axios.min.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
 </html>
-
-<!-- https://www.google.com/search?q=pokebola+rolando+gif&tbm=isch&source=iu&ictx=1&fir=Cfvfcffo8JDQ8M%253A%252CDjRkStsCQwLzfM%252C_&vet=1&usg=AI4_-kTzLqceGKYhgBaBNSkqRNhsI_ZLbQ&sa=X&ved=2ahUKEwiezPvK-c_pAhUAHLkGHQu3BeMQ9QEwAnoECAoQFQ#imgrc=Cfvfcffo8JDQ8M&imgdii=AeG08-5ScksoCM -->

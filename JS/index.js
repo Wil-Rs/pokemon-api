@@ -28,11 +28,10 @@ function loadStop(){
 }
 
 function addInfo(resp, local){
-	local.innerHTML = `
-		<p>Nome: ${resp.data.name}</p>
-		<p>Peso: ${resp.data.weight}</p>
-		<p>Altura: ${resp.data.height}</p>
-		`
+	document.querySelector('#nome').value = resp.data.name
+	document.querySelector('#peso').value = resp.data.weight
+	document.querySelector('#altura').value = resp.data.height
+		
 }
 
 function con(url){
