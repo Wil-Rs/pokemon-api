@@ -13,6 +13,12 @@
         width: 100%;
         background-size: 100%;
       }
+
+      .pp {
+      	 background-color: rgba(255, 255, 255, 0.7);
+      	 border-radius: 100px;
+      }
+
     </style>
  
     <title>Pokemon</title>
@@ -35,40 +41,41 @@
           </div>
         </form>
 
-          <div id="principal" style="display: none;" class="p3">
+          <div id="principal" style="display: none;" class="pt-5 mt-3 pp">
 
-            <div id="info">
-              <div class="">
-                <img id="foto" class="img-fluid w-25 mx-auto d-block bg-white p-3">
-                <button class="btn btn-primary mx-auto d-block" id="proxima">Proxima</button>
-              </div>
-            </div>
-          
-            <form class="p-3">
-              
-              <div class="row">
-                <div class="col">
-                  <div class="form-group">
-                    <label class="text-white font-weight-bold bg-primary border rounded">Nome</label>
-                    <input type="text" name="" class="form-control" id="nome">
-                  </div>
-                </div>
-        
-                <div class="col">
-                  <div class="form-group">
-                    <label class="text-white font-weight-bold bg-primary border rounded">Peso</label>
-                    <input type="text" name="" class="form-control" id="peso">
-                  </div>
-                </div>
+          	<div class="container">
+          		<div class="row">
+          			<div class="col-6">
+			            <div id="info">
+			              <div class=" text-center">
+			              	<!-- img-fluid w-25 mx-auto d-block bg-white p-3 -->
+			                <img id="foto" class="w-50">
+			                <!-- btn btn-primary mx-auto d-block -->
+			                <div class="text-center">
+				                <button class="btn btn-success" id="proxima">Proxima</button>
+			                </div>
+			              </div>
+			            </div>          				
+          			</div>
 
-                <div class="col">
-                  <div class="form-group">
-                    <label class="text-white font-weight-bold bg-primary border rounded">Altura</label>
-                    <input type="text" name="" class="form-control" id="altura">
-                  </div>
-                </div>
-              </div>
-            </form>
+          			<div class="col-6 p-5">
+          				
+	                    <label class="font-weight-bold rounded">Nome</label>
+	                    <input type="text" name="" class="form-control w-50" id="nome">
+	                
+	                    <label class="font-weight-bold rounded">Peso</label>
+	                    <input type="text" name="" class="form-control w-50" id="peso">
+	                
+	                    <label class="font-weight-bold rounded">Altura</label>
+	                    <input type="text" name="" class="form-control w-50" id="altura">
+			                 
+			            
+          			</div>
+          		</div>
+	          
+	            
+          	</div>
+
           </div>
       </div>
     </div>
